@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="container-fluid">
+    <span class="score">Score: {{score}}</span>
+    <!-- <span class="score">Frequency: {{bombSpawnTime}}</span> -->
+    <!-- <span class="score">Bombs: {{bombs.length}}</span> -->
+    <div class="row bombArea" #bombArea>
+      <ng-container *ngFor="let bomb of bombs">
+        <bomb [data]="bomb"></bomb>
+      </ng-container>
+    </div>
+    <div class="row bucketArea">
+      <ng-container *ngFor="let bucket of buckets">
+        <div class="col-md-4">
+          <bucket [data]="bucket"></bucket>
+        </div>
+      </ng-container>
+    </div>
+    <span class="bucketTimer">Change in: {{countDown | async}}s</span>
+  </div>
+</div>

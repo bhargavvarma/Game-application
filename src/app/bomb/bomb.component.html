@@ -1,0 +1,4 @@
+<div class="bomb" [style.background-color]="bombData.Type" [style.top.px]="bombData.Position.Top" [style.left.px]="bombData.Position.Left"
+  *ngIf="!isExploded" dnd-draggable [dragEnabled]="true" [dragData]="bombData">
+  <span>{{bombData.ExplodeTime}}</span>
+</div>
